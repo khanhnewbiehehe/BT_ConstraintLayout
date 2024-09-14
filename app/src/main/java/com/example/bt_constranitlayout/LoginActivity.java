@@ -3,6 +3,8 @@ package com.example.bt_constranitlayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -25,6 +27,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Button loginBtn = findViewById(R.id.btnlogin);
+        EditText email = findViewById(R.id.inputEmail);
+        EditText pass = findViewById(R.id.inputPassword);
+        TextView inform = findViewById(R.id.displayInformation);
+
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String emailEntered = email.getText().toString();
+                String passEntered = pass.getText().toString();
+                inform.setText("Email: " + emailEntered + " Password: " + passEntered );
+            }
+        });
 
     }
 }
