@@ -28,6 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         Button registerBtn = findViewById(R.id.btnRegister);
+        EditText name = findViewById(R.id.inputUsername);
         EditText email = findViewById(R.id.inputEmail);
         EditText pass = findViewById(R.id.inputPassword);
         TextView inform = findViewById(R.id.displayInformation);
@@ -37,7 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String emailEntered = email.getText().toString();
                 String passEntered = pass.getText().toString();
-                inform.setText("Email: " + emailEntered + " Password: " + passEntered );
+                String nameEntered = name.getText().toString();
+                inform.setText("Username: " + nameEntered + " Email: " + emailEntered + " Password: " + passEntered );
             }
         });
     }
